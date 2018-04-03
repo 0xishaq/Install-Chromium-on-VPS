@@ -1,0 +1,85 @@
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url(http://4.bp.blogspot.com/-8n5B05PTdFc/T1eJ4l1t1jI/AAAAAAAABBQ/wjOQPxrTcsI/s1600/overlay.png) repeat 0 0;}
+#colorbox{}
+    #cboxTopLeft{width:21px; height:21px; background:url(http://1.bp.blogspot.com/-E_w5nMgbRFo/T1eJ1psvFtI/AAAAAAAABA4/sDGZgQGxqVY/s1600/controls.png) no-repeat -101px 0;}
+    #cboxTopRight{width:21px; height:21px; background:url(http://1.bp.blogspot.com/-E_w5nMgbRFo/T1eJ1psvFtI/AAAAAAAABA4/sDGZgQGxqVY/s1600/controls.png) no-repeat -130px 0;}
+    #cboxBottomLeft{width:21px; height:21px; background:url(http://1.bp.blogspot.com/-E_w5nMgbRFo/T1eJ1psvFtI/AAAAAAAABA4/sDGZgQGxqVY/s1600/controls.png) no-repeat -101px -29px;}
+    #cboxBottomRight{width:21px; height:21px; background:url(http://1.bp.blogspot.com/-E_w5nMgbRFo/T1eJ1psvFtI/AAAAAAAABA4/sDGZgQGxqVY/s1600/controls.png) no-repeat -130px -29px;}
+    #cboxMiddleLeft{width:21px; background:url(http://1.bp.blogspot.com/-E_w5nMgbRFo/T1eJ1psvFtI/AAAAAAAABA4/sDGZgQGxqVY/s1600/controls.png) left top repeat-y;}
+    #cboxMiddleRight{width:21px; background:url(http://1.bp.blogspot.com/-E_w5nMgbRFo/T1eJ1psvFtI/AAAAAAAABA4/sDGZgQGxqVY/s1600/controls.png) right top repeat-y;}
+    #cboxTopCenter{height:21px; background:url(http://2.bp.blogspot.com/-atBzpahc3J4/T1eJ0xcvm9I/AAAAAAAABA0/xCYZwJH9iX8/s1600/border.png) 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url(http://2.bp.blogspot.com/-atBzpahc3J4/T1eJ0xcvm9I/AAAAAAAABA0/xCYZwJH9iX8/s1600/border.png) 0 -29px repeat-x;}
+    #cboxContent{background:#fff; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; bottom:0; left:0; background:url(http://1.bp.blogspot.com/-E_w5nMgbRFo/T1eJ1psvFtI/AAAAAAAABA4/sDGZgQGxqVY/s1600/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious:hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background:url(http://1.bp.blogspot.com/-E_w5nMgbRFo/T1eJ1psvFtI/AAAAAAAABA4/sDGZgQGxqVY/s1600/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext:hover{background-position:-50px -25px;}
+        #cboxLoadingOverlay{background:url(https://lh5.googleusercontent.com/-YD26J93vHAU/T1eJ23YKUYI/AAAAAAAABBE/I20XOWqx8Cs/h120/loading.gif) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(https://lh5.googleusercontent.com/-YD26J93vHAU/T1eJ23YKUYI/AAAAAAAABBE/I20XOWqx8Cs/h120/loading.gif) no-repeat center center;}
+        #cboxClose{position:absolute; bottom:0; right:0; background:url(http://1.bp.blogspot.com/-E_w5nMgbRFo/T1eJ1psvFtI/AAAAAAAABA4/sDGZgQGxqVY/s1600/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose:hover{background-position:-25px -25px;}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/*
+  The following provides PNG transparency support for IE6
+  Feel free to remove this and the /ie6/ directory if you have dropped IE6 support.
+*/
+.cboxIE6 #cboxTopLeft{background:url(http://4.bp.blogspot.com/-qXR5VW86tTU/T1eK26OlLJI/AAAAAAAABCI/15OgyJGAxgc/s1600/borderTopLeft.png);}
+.cboxIE6 #cboxTopCenter{background:url(http://3.bp.blogspot.com/-M37w9fBpYc0/T1eK1xVuXMI/AAAAAAAABCA/dj23BHXxP94/s1600/borderTopCenter.png);}
+.cboxIE6 #cboxTopRight{background:url(http://1.bp.blogspot.com/-RhmmNbYthgQ/T1eK3_yFbYI/AAAAAAAABCQ/OOA2WRKRIpI/s1600/borderTopRight.png);}
+.cboxIE6 #cboxBottomLeft{background:url(http://1.bp.blogspot.com/-RhmmNbYthgQ/T1eK3_yFbYI/AAAAAAAABCQ/OOA2WRKRIpI/s1600/borderTopRight.png);}
+.cboxIE6 #cboxBottomCenter{background:url(http://4.bp.blogspot.com/-9_GvfznJpmA/T1eKxznvIqI/AAAAAAAABBc/QCxpXpZRRKc/s1600/borderBottomCenter.png);}
+.cboxIE6 #cboxBottomRight{background:url(http://2.bp.blogspot.com/-JMn5kVlrREs/T1eKzLJQp1I/AAAAAAAABBo/sKxAQECScTs/s1600/borderBottomRight.png);}
+.cboxIE6 #cboxMiddleLeft{background:url(http://2.bp.blogspot.com/-GdZVtHqHzAY/T1eK0LfvVAI/AAAAAAAABBw/NItg_Pispb0/s1600/borderMiddleLeft.png);}
+.cboxIE6 #cboxMiddleRight{background:url(http://3.bp.blogspot.com/-Inz4vd6RVTo/T1eK1JG3aWI/AAAAAAAABB4/mqn1hczMewg/s1600/borderMiddleRight.png);}
+
+.cboxIE6 #cboxTopLeft,
+.cboxIE6 #cboxTopCenter,
+.cboxIE6 #cboxTopRight,
+.cboxIE6 #cboxBottomLeft,
+.cboxIE6 #cboxBottomCenter,
+.cboxIE6 #cboxBottomRight,
+.cboxIE6 #cboxMiddleLeft,
+.cboxIE6 #cboxMiddleRight {
+    _behavior: expression(this.src = this.src ? this.src : this.currentStyle.backgroundImage.split('"')[1], this.style.background = "none", this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src + ", sizingMethod='scale')");
+}
