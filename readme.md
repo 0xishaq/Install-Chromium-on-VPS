@@ -34,7 +34,7 @@ mkdir chromium
 cd chromium
 nano docker-compose.yaml
 ```
-4. edit file docker-compose.yaml
+4. edit file `docker-compose.yaml`
 ```console
 ---
 services:
