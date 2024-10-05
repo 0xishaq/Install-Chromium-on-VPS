@@ -1,2 +1,0 @@
-# popup
-script pop up
