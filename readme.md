@@ -1,4 +1,4 @@
-Buat kalian yang garap node tapi ingin run garapan ektension di node supaya gak usah beli RDP nih atmint kasih tutorial install chromium buat run extension di VPS
+Buat kalian yang garap node tapi ingin run garapan ektension di node supaya gak usah beli RDP, ini tutorial install chromium buat run extension di VPS
 
 1. install docker jika sudah ada skip
 ```console
