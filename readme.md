@@ -23,18 +23,18 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 # Docker version check
 docker --version
 ```
-2. cek timezone kalau pake contabo pasti Europe/Berlin
-```
+2. cek timezone kalau pake contabo pasti `Europe/Berlin`
+```console
 realpath --relative-to /usr/share/zoneinfo /etc/localtime
 ```
 3.  install chromium
-```
+```console
 mkdir chromium
 cd chromium
 nano docker-compose.yaml
 ```
 4. edit file docker-compose.yaml
-```
+```console
 ---
 services:
   chromium:
@@ -60,7 +60,7 @@ services:
 jika sudah tekan `ctrl`+`x`+`y`+`enter`
 
 5. run docker chromium
-```
+```console
 cd $HOME && cd chromium
 
 docker compose up -d
@@ -69,7 +69,7 @@ docker compose up -d
 `https://Server_IP:3011/` sesuai port yang kita setting ganti server IP dengan IP VPS kalian contoh : `https://127.0.0.1:3010`
 
 7. stop / delete chromium
-```
+```console
 docker stop chromium
 docker rm chromium
 docker system prune
