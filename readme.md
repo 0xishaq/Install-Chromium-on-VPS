@@ -1,3 +1,4 @@
+# Install Chromium on VPS
 Buat kalian yang garap node tapi ingin run garapan ektension di node supaya gak usah beli RDP, ini tutorial install chromium buat run extension di VPS
 
 1. install docker jika sudah ada skip
