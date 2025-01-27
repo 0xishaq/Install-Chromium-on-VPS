@@ -49,7 +49,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ= #edit dengan timezone
-      - CHROME_CLI=https://x.com/littlethingscap #optional
+      - CHROME_CLI=https://x.com/0xheyishaq #optional
     volumes:
       - /root/chromium/config:/config
     ports:
